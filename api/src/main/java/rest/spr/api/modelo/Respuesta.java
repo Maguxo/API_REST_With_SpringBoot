@@ -1,7 +1,14 @@
 package rest.spr.api.modelo;
 
+import lombok.*;
+
 import java.time.LocalDateTime;
 
+@NoArgsConstructor //constructor sin atributos.
+@AllArgsConstructor //constructor con todos los atributos.
+@Getter //Construye los getters de las variables sin tener que escribir una por una,
+@Setter //Construye todos los tters de las varibles sin tener que escribir una por una.
+@EqualsAndHashCode(of= "id") // usa el parametro id para la comparaciones entre topicos
 public class Respuesta {
     private Long id;
     private String mensaje;
@@ -9,15 +16,13 @@ public class Respuesta {
     private LocalDateTime fechaCreacion = LocalDateTime.now();
     private Usuario autor;
     private Boolean solucion = false;
-
-    @Override
+    /*@Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -33,53 +38,5 @@ public class Respuesta {
         } else if (!id.equals(other.id))
             return false;
         return true;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getMensaje() {
-        return mensaje;
-    }
-
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
-    }
-
-    public Topico getTopico() {
-        return topico;
-    }
-
-    public void setTopico(Topico topico) {
-        this.topico = topico;
-    }
-
-    public LocalDateTime getfechaCreacion() {
-        return fechaCreacion;
-    }
-
-    public void setfechaCreacion(LocalDateTime fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
-
-    public Usuario getAutor() {
-        return autor;
-    }
-
-    public void setAutor(Usuario autor) {
-        this.autor = autor;
-    }
-
-    public Boolean getSolucion() {
-        return solucion;
-    }
-
-    public void setSolucion(Boolean solucion) {
-        this.solucion = solucion;
-    }
+    }*/
 }
