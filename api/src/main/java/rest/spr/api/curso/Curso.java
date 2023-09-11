@@ -1,24 +1,29 @@
-package rest.spr.api.modelo;
-
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+package rest.spr.api.curso;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Embeddable
+@Table(name = "cursos") //nombre de la tabla en mysql
+@Entity(name = "Curso")
 @NoArgsConstructor //constructor sin atributos.
 @AllArgsConstructor //constructor con todos los atributos.
 @Getter //Construye los getters de las variables sin tener que escribir una por una,
 @Setter //Construye todos los tters de las varibles sin tener que escribir una por una.
 @EqualsAndHashCode(of= "id") // usa el parametro id para la comparaciones entre topicos
-public class Usuario {
+public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombre;
-    private String email;
-    private String contrasena;
+    private Nombre nombre;
+    private Categoria categoria;
+
+    public Curso(DatosRegistroCurso datosRegistroCurso) {
+        this.id= datosRegistroCurso.id();
+        this.nombre= datosRegistroCurso.nombre();
+        this.categoria= datosRegistroCurso.categoria();
+    }
+
+
     /*@Override
     public int hashCode() {
         final int prime = 31;
@@ -34,7 +39,7 @@ public class Usuario {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Usuario other = (Usuario) obj;
+        Curso other = (Curso) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
