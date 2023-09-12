@@ -1,3 +1,10 @@
 package rest.spr.api.curso;
-public record DatosRegistroCurso(Long id,Nombre nombre, Categoria categoria) {
+import jakarta.validation.constraints.NotNull;
+
+public record DatosRegistroCurso(
+        Long id,
+        @NotNull
+        Nombre nombre,
+        @NotNull
+        Categoria categoria) {
 }

@@ -2,7 +2,7 @@ package rest.spr.api.curso;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Embeddable
+//@Embeddable
 @Table(name = "cursos") //nombre de la tabla en mysql
 @Entity(name = "Curso")
 @NoArgsConstructor //constructor sin atributos.
@@ -14,7 +14,9 @@ public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Enumerated(EnumType.STRING)
     private Nombre nombre;
+    @Enumerated(EnumType.STRING)
     private Categoria categoria;
 
     public Curso(DatosRegistroCurso datosRegistroCurso) {
@@ -22,8 +24,6 @@ public class Curso {
         this.nombre= datosRegistroCurso.nombre();
         this.categoria= datosRegistroCurso.categoria();
     }
-
-
     /*@Override
     public int hashCode() {
         final int prime = 31;

@@ -1,18 +1,18 @@
 package rest.spr.api.usuario;
 
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
-@Embeddable
+//@Embeddable
+@Table(name = "usuarios")
+@Entity(name = "Usuario")
 @NoArgsConstructor //constructor sin atributos.
 @AllArgsConstructor //constructor con todos los atributos.
 @Getter //Construye los getters de las variables sin tener que escribir una por una,
 @Setter //Construye todos los tters de las varibles sin tener que escribir una por una.
 @EqualsAndHashCode(of= "id") // usa el parametro id para la comparaciones entre topicos
 public class Usuario {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,10 +20,11 @@ public class Usuario {
     private String email;
     private String contrasena;
 
-    public Usuario(Usuario autor) {
-        this.nombre= autor.getNombre();
-        this.email= autor.getEmail();
-        this.contrasena= autor.getContrasena();
+    public Usuario(DatosRegistroUsuario datosRegistroUsuario) {
+        this.id= datosRegistroUsuario.id();
+        this.nombre= datosRegistroUsuario.nombre();
+        this.email= datosRegistroUsuario.email();
+        this.contrasena= datosRegistroUsuario.contrasena();
     }
 
     /*@Override

@@ -6,7 +6,7 @@ import rest.spr.api.usuario.Usuario;
 import rest.spr.api.topicos.Topico;
 
 import java.time.LocalDateTime;
-@Embeddable
+//@Embeddable
 @Table(name = "respuestas") //nombre de la tabla en mysql
 @Entity(name = "Respuesta")
 @NoArgsConstructor //constructor sin atributos.
@@ -19,19 +19,20 @@ public class Respuesta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String mensaje;
-    private Topico topico;
-    private LocalDateTime fechaCreacion = LocalDateTime.now();
-    private Usuario autor;
-    private Boolean solucion = false;
+    //@ManyToOne(fetch = FetchType.LAZY)
+    //@JoinColumn(name = "topico_id")
+    //private Topico topico;
+    private LocalDateTime fecha;
+    //@ManyToOne(fetch = FetchType.LAZY)
+    //@JoinColumn(name = "usuario_id")
+    //private Usuario usuario;
+    private Boolean solucion;
 
-    public Respuesta(Respuesta respuesta) {
-        this.mensaje= respuesta.getMensaje();
-        this.topico= respuesta.getTopico(); //¿...?
-       // this.topico= new Topico(respuesta.getTopico());
-        this.fechaCreacion= respuesta.getFechaCreacion();
-        this.autor= respuesta.getAutor();
-        this.autor= new Usuario(respuesta.getAutor());
-        this.solucion= respuesta.getSolucion();
+    public Respuesta(DatosRegistroRespuesta datosRegistroRespuesta) {
+        this.id= datosRegistroRespuesta.id();
+        this.mensaje= datosRegistroRespuesta.mensaje();
+        this.fecha= datosRegistroRespuesta.fecha();
+        this.solucion= datosRegistroRespuesta.solucion();
     }
     /*@Override
     public int hashCode() {

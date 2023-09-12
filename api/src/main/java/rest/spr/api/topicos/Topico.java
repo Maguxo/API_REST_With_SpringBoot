@@ -2,12 +2,9 @@ package rest.spr.api.topicos;
 import jakarta.persistence.*;
 import lombok.*;
 import rest.spr.api.curso.Curso;
-import rest.spr.api.curso.CursoRepository;
 import rest.spr.api.respuesta.Respuesta;
 import rest.spr.api.usuario.Usuario;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Table(name = "topicos") //nombre de la tabla en mysql
 @Entity(name = "Topico")
@@ -25,11 +22,17 @@ public class Topico {
     private LocalDateTime fechaCreacion = LocalDateTime.now();
     @Enumerated(EnumType.STRING)
     private StatusTopico status = StatusTopico.NO_RESPONDIDO;
-    @Embedded //es para instanciar la clase de lo contrario tendria que hacer Usuario autor= new Usuario();
-    private Usuario autor;
-    @Embedded  //es para instanciar la clase
+    //@Embedded //es para instanciar la clase de lo contrario tendria que hacer Usuario autor= new Usuario();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "autor_id")
+    private Usuario usuario;
+    //@Embedded  //es para instanciar la clase
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "curso_id")
     private Curso curso;
-    @Embedded //es para instanciar la clase
+    //@Embedded //es para instanciar la clase
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "respuesta_id")
     private Respuesta respuesta;
     //private List<Respuesta> respuestas = new ArrayList<>();
     public Topico(DatosRegistroTopicos datosRegistroTopicos) {
@@ -38,9 +41,12 @@ public class Topico {
       this.mensaje= datosRegistroTopicos.mensaje();
       this.fechaCreacion= LocalDateTime.parse(datosRegistroTopicos.fechaCreacion());
       this.status= datosRegistroTopicos.estatusTopico();
-      this.autor= new Usuario(datosRegistroTopicos.autor());
+      //this.usuario = new Usuario(datosRegistroTopicos.autor());
       //this.curso= new Curso(datosRegistroTopicos.curso());
-      this.respuesta= new Respuesta(datosRegistroTopicos.respuesta());
+      //this.respuesta= new Respuesta(datosRegistroTopicos.respuesta());
+    }
+
+    public Topico(Topico topico) {
     }
    /* @Override
     public int hashCode() {
