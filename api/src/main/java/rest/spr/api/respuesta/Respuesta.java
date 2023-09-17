@@ -2,6 +2,7 @@ package rest.spr.api.respuesta;
 
 import jakarta.persistence.*;
 import lombok.*;
+import rest.spr.api.autor.Autor;
 import rest.spr.api.usuario.Usuario;
 import rest.spr.api.topicos.Topico;
 
@@ -23,9 +24,9 @@ public class Respuesta {
     //@JoinColumn(name = "topico_id")
     //private Topico topico;
     private LocalDateTime fecha;
-    //@ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "usuario_id")
-    //private Usuario usuario;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "autor_id")
+    private Autor autor;
     private Boolean solucion;
 
     public Respuesta(DatosRegistroRespuesta datosRegistroRespuesta) {
@@ -33,6 +34,19 @@ public class Respuesta {
         this.mensaje= datosRegistroRespuesta.mensaje();
         this.fecha= datosRegistroRespuesta.fecha();
         this.solucion= datosRegistroRespuesta.solucion();
+        this.autor= new Autor(datosRegistroRespuesta.autor_id());
+    }
+    public Respuesta(Long respuesta_id) {
+        this.id=respuesta_id;
+    }
+
+    public void actualizarRespuesta(DatosActualizarRespuesta datosActualizarRespuesta) {
+        if (datosActualizarRespuesta.mendje() != null) {
+            this.mensaje = datosActualizarRespuesta.mendje();
+        }
+        if (datosActualizarRespuesta.solucion() != null ) {
+            this.solucion = datosActualizarRespuesta.solucion();
+        }
     }
     /*@Override
     public int hashCode() {

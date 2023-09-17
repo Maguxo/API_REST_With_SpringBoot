@@ -1,8 +1,8 @@
 package rest.spr.api.autor;
 
-public record DatoslistadoAutor(String nombre,String email) {
+public record DatoslistadoAutor(Long id,String nombre,String email) {
 
     public DatoslistadoAutor(Autor autor){
-        this(autor.getNombre(),autor.getEmail());
+        this(autor.getId(), autor.getNombre(),autor.getEmail());
     }
 }

@@ -19,9 +19,9 @@ public class Topico {
     private Long id;
     private String titulo;
     private String mensaje;
-    private LocalDateTime fechaCreacion = LocalDateTime.now();
+    private LocalDateTime fecha;
     @Enumerated(EnumType.STRING)
-    private StatusTopico status = StatusTopico.NO_RESPONDIDO;
+    private StatusTopico status;
     //@Embedded //es para instanciar la clase de lo contrario tendria que hacer Usuario autor= new Usuario();
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "autor_id")
@@ -39,14 +39,25 @@ public class Topico {
 
       this.titulo= datosRegistroTopicos.titulo();
       this.mensaje= datosRegistroTopicos.mensaje();
-      this.fechaCreacion= LocalDateTime.parse(datosRegistroTopicos.fechaCreacion());
-      this.status= datosRegistroTopicos.estatusTopico();
-      //this.usuario = new Usuario(datosRegistroTopicos.autor());
-      //this.curso= new Curso(datosRegistroTopicos.curso());
-      //this.respuesta= new Respuesta(datosRegistroTopicos.respuesta());
+      this.fecha= datosRegistroTopicos.fecha();
+      this.status= datosRegistroTopicos.status();
+      this.usuario = new Usuario(datosRegistroTopicos.autor_id());
+      this.curso= new Curso(datosRegistroTopicos.curso_id());
+      this.respuesta= new Respuesta(datosRegistroTopicos.autor_id());
     }
 
     public Topico(Topico topico) {
+    }
+
+    public void actualizarTopico(DatosActualizarTopico datosActualizarTopico) {
+        if (datosActualizarTopico.titulo() != null) {
+            this.titulo = datosActualizarTopico.titulo();
+        }
+        if (datosActualizarTopico.mensaje() != null ) {
+            this.mensaje = datosActualizarTopico.mensaje();
+        }if (datosActualizarTopico.status() != null){
+            this.status= datosActualizarTopico.status();
+        }
     }
    /* @Override
     public int hashCode() {

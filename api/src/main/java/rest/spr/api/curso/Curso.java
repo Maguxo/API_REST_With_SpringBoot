@@ -18,12 +18,28 @@ public class Curso {
     private Nombre nombre;
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
-
+    //private Boolean actio;
     public Curso(DatosRegistroCurso datosRegistroCurso) {
         this.id= datosRegistroCurso.id();
         this.nombre= datosRegistroCurso.nombre();
         this.categoria= datosRegistroCurso.categoria();
     }
+
+    public Curso(Long curso_id) {
+        this.id=curso_id;
+    }
+
+    public void actualizarCurso(DatosActualizarCurso datosActualizarCurso) {
+        if (datosActualizarCurso.nombre() != null) {
+            this.nombre = datosActualizarCurso.nombre();
+        }
+        if (datosActualizarCurso.categoria() != null ) {
+            this.categoria = datosActualizarCurso.categoria();
+        }
+    }
+  //  public void desactivarCurso() {
+    //  this.actio=true;
+    //}
     /*@Override
     public int hashCode() {
         final int prime = 31;

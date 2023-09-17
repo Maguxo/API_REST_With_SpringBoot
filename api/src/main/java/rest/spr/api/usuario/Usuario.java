@@ -26,6 +26,19 @@ public class Usuario {
         this.email= datosRegistroUsuario.email();
         this.contrasena= datosRegistroUsuario.contrasena();
     }
+    public Usuario(Long autor_id) {
+      this.id=autor_id;
+    }
+
+    public void actualizarUsuario(DatosActualizarUsuario datosActualizarUsuario) {
+        if (datosActualizarUsuario.nombre() != null){
+            this.nombre= datosActualizarUsuario.nombre();
+        }if (datosActualizarUsuario.email() != null){
+            this.email= datosActualizarUsuario.email();
+        }if (datosActualizarUsuario.contrasena() != null){
+            this.contrasena= datosActualizarUsuario.contrasena();
+        }
+    }
 
     /*@Override
     public int hashCode() {

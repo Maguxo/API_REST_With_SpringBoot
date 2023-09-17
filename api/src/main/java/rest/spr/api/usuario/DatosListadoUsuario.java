@@ -1,8 +1,8 @@
 package rest.spr.api.usuario;
 
-public record DatosListadoUsuario(String nombre, String email) {
+public record DatosListadoUsuario(Long id,String nombre, String email) {
 
     public DatosListadoUsuario(Usuario usuario){
-        this(usuario.getNombre(), usuario.getEmail());
+        this(usuario.getId(),usuario.getNombre(), usuario.getEmail());
     }
 }
