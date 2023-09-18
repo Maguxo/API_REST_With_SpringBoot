@@ -7,9 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
-import rest.spr.api.respuesta.*;
-
-import java.util.List;
+import rest.spr.api.domain.respuesta.*;
 
 @RestController
 @RequestMapping("/respuestas")

@@ -6,10 +6,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
-import rest.spr.api.curso.*;
-import rest.spr.api.topicos.DatosListadoTopico;
-
-import java.util.List;
+import rest.spr.api.domain.curso.Curso;
+import rest.spr.api.domain.curso.DatosActualizarCurso;
+import rest.spr.api.domain.curso.DatosListadoCurso;
+import rest.spr.api.domain.curso.CursoRepository;
+import rest.spr.api.domain.curso.DatosRegistroCurso;
 
 @RestController
 @RequestMapping("/cursos")
