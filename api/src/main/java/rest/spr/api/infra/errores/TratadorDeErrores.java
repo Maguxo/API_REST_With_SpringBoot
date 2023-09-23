@@ -1,4 +1,4 @@
-package rest.spr.api.infra;
+package rest.spr.api.infra.errores;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;

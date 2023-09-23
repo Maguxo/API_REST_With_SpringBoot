@@ -50,7 +50,6 @@ public class UsuarioController {
         usuarioResository.delete(usuario);
         return ResponseEntity.noContent().build(); //Me muestra un 204 indicando que es lo que se espera.
     }//ResponseEntity maneja las respuestas http configurandola completamente la respuesta http.
-
     @GetMapping("/{id}")
     public ResponseEntity<DatosRespuestaUsuario> retornarDatosUsuario(@PathVariable Long id){
         Usuario usuario= usuarioResository.getReferenceById(id);

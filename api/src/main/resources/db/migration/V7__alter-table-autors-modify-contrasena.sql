@@ -1,0 +1,1 @@
+ALTER TABLE autors MODIFY contrasena VARCHAR(500)  NOT NULL;
