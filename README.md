@@ -13,7 +13,7 @@
   <div align="center">
     <h1>Hablando un poco del proyecto</h1>
     <p>Mediante reglas de negocio se construye una API REST con la necesidad de tratar datos para que se relacione un topico con una respuesta teniendo encuenta la realización de validaciones.
-    Por el momento se trabajara a nivel back-end apoyandonos en <mark>Insomnia</mark> para la realización de pruebas.</p>
+    Por el momento se trabajara a nivel back-end apoyandonos en << Insomnia >> para la realización de pruebas.</p>
 
   </div>
 
