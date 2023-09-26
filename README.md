@@ -11,7 +11,7 @@
 
   ---
   <div align="center">
-    <h1>Hablando un poco del proyecto</h1>
+    <h1>📜Hablando un poco del proyecto📜</h1>
     <p>Mediante reglas de negocio se construye una API REST con la necesidad de tratar datos para que se relacione un topico con una respuesta teniendo encuenta la realización de validaciones.
     Por el momento se trabajara a nivel back-end apoyandonos en << Insomnia >> para la realización de pruebas.</p>
 
@@ -20,7 +20,8 @@
 
 ---
   <div align="center">
-    <h1>Modelo relacional</h1>
+    <h1>🗳️Modelo relacional💾</h1>
+    <p>Con ayuda de Mysql Workbench se realiza el diagrama entidad relacion con la que trabajarenos y construiremos.</p>
    <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/7b7a9a61-59b4-4f46-8af0-4a3d75cc97f4">
   </div>
 
