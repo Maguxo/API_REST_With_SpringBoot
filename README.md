@@ -11,7 +11,7 @@
   </div>
 
   <div align="center">
-   <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/ce6210e1-3cc1-4845-8dc5-21008d55633d">
+   <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/7b7a9a61-59b4-4f46-8af0-4a3d75cc97f4">
 
   </div>
 
