@@ -65,7 +65,7 @@
   <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/424959aa-5020-4a4d-ad92-63ae441e1382"  width=800 height="350">
 
    <h1>📜Mostrar topico</h1>
-   <p></p>
+   <p>write what happened...</p>
     <img src=""  width=800 height="350">
 </div>
 
