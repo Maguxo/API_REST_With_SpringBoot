@@ -71,7 +71,7 @@
   
    <h1>📜Mostrando topico</h1>
    <p>Teniendo encuenta la solicitud GET para la URI/topicos se debe mostrar titulo, mensaje, fecha de creación, estatus autor y respuesta, en formato JSON. </p>
-    <img src=""  width=800 height="350">
+    <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/755c3bf8-f7cd-44c0-abdd-b3e79a4d4811"  width=800 height="350">
 </div>
 
 </div>
