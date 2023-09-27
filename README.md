@@ -66,7 +66,7 @@
 
    <h1>📜Mostrar topico</h1>
    <p>write what happened...</p>
-    <img src=""  width=800 height="350">
+    <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/8e750716-fec9-43e3-9b40-aa2b3ea153ef"  width=800 height="350">
 </div>
 
 </html>
