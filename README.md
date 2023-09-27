@@ -59,7 +59,11 @@
 <div align="center">
 <h1>⌛Dessarrollo y Prueba de la API🧩</h1>
 <p>Apoyandonos en Insomnia para la pruebas de la API y que las reglas del negocio salieran a lo sigerido, en los datos requeridos en las solicitudes del POST,GET, PUT Y DELETE; mostrados a continuación: </p>
-  
+
+  <h1>🗳️Registro de topico</h1>
+  <p>Teniendo encuneta la solicitud POST para la URL/topicon; los datos tenidos encuenta para esta tarea son: titulo, mensaje, autor, curso y respuesta. Que se  deben enviarse en el cuerpo de la solicitud, en formato JSON.</p>
+  <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/424959aa-5020-4a4d-ad92-63ae441e1382"  width=800 height="350">
 </div>
 
 </html>
+
