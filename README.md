@@ -65,8 +65,15 @@
   <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/424959aa-5020-4a4d-ad92-63ae441e1382"  width=800 height="350">
 
    <h1>📜Detallando topico</h1>
-   <p>Teniendo encuenta la solicitud GET para la URI/topicos se debe mostrar titulo, mensaje, fecha de creación, estatus autor y curso con la respuesta, en formato JSON. </p>
+   <p>Teniendo encuenta la solicitud GET para la URI/topicos{id} se debe mostrar titulo, mensaje, fecha de creación, estatus autor y curso con la respuesta, en formato JSON. </p>
     <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/8e750716-fec9-43e3-9b40-aa2b3ea153ef"  width=800 height="350">
+
+  
+   <h1>📜Mostrando topico</h1>
+   <p>Teniendo encuenta la solicitud GET para la URI/topicos se debe mostrar titulo, mensaje, fecha de creación, estatus autor y respuesta, en formato JSON. </p>
+    <img src=""  width=800 height="350">
+</div>
+
 </div>
 
 </html>
