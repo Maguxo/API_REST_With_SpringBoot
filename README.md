@@ -52,7 +52,13 @@
       <td align="center"> <a> <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/e3050cfd-efe2-4c76-bba4-297fadd67356"  width=100 height="50"> </a> </td>
     </tr>
   </tbody>
-</table>
+</table>  
+</div>
+
+---
+<div align="center">
+<h1>⌛Dessarrollo y Prueba de la API🧩</h1>
+<p>Apoyandonos en Insomnia para la pruebas de la API y que las reglas del negocio salieran a lo sigerido, en los datos requeridos en las solicitudes del POST,GET, PUT Y DELETE; mostrados a continuación: </p>
   
 </div>
 
