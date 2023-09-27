@@ -22,6 +22,10 @@ public class Usuario {
     private String email;
     private String contrasena;
 
+    public Usuario(DatoslistadoUsuarioEspecifico datoslistadoUsuarioEspecifico){//realizado ahora
+        this.nombre= datoslistadoUsuarioEspecifico.nombre();
+        this.email= datoslistadoUsuarioEspecifico.email();
+    }
     public Usuario(DatosRegistroUsuario datosRegistroUsuario) {
         this.id= datosRegistroUsuario.id();
         this.nombre= datosRegistroUsuario.nombre();

@@ -8,10 +8,4 @@ import rest.spr.api.domain.topicos.StatusTopico;
 @Repository
 public interface RespuestaRepository extends JpaRepository<Respuesta,Long> {
 
-    @Query("""
-            select r from Respuesta r
-            where r.solucion= 0
-            and 
-            """)
-    Respuesta seleccionarRespuestaEstatus(StatusTopico status);
 }

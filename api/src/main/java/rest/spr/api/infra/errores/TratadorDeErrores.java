@@ -1,6 +1,7 @@
 package rest.spr.api.infra.errores;
 
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.ValidationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -13,6 +14,16 @@ public class TratadorDeErrores {
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity tratarError404(){
         return ResponseEntity.notFound().build();
+    }
+
+
+    @ExceptionHandler(ValidationException.class)//
+    public ResponseEntity erroresHandlerValidacionesDeIntegridad(Exception e){
+        return ResponseEntity.badRequest().body(e.getMessage());    }
+
+    @ExceptionHandler(ValidacionIntegridad.class)// para que sea lanzado.
+    public ResponseEntity erroresHandlerValidacionesDeNegocio(Exception e){
+        return ResponseEntity.badRequest().body(e.getMessage());//para seber si envie parametro completos o salieron mal. y que no deben estar vacíos.
     }
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity tratarError400(MethodArgumentNotValidException e){

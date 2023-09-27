@@ -22,15 +22,15 @@ public class RegistroTopicoService {
     private UsuarioResository usuarioResository;
     @Autowired
     private TopicosRepository topicosRepository;
-    public void registro(DatosRegistroTopicos datosRegistroTopicos){
+    public DatosRespuestaTopicos registro(DatosRegistroTopicos datosRegistroTopicos){
 
-        if(usuarioResository.findById(datosRegistroTopicos.autor_id()).isPresent()){
+        if(!usuarioResository.findById(datosRegistroTopicos.autor_id()).isPresent()){
             throw new ValidacionIntegridad("Este id para usuario no fue encontrado.");
         }
-        if (cursoRepository.findById(datosRegistroTopicos.curso_id()).isPresent()){
+        if (!cursoRepository.findById(datosRegistroTopicos.curso_id()).isPresent()){
             throw new ValidacionIntegridad("Este id para curso no fue encontrado.");
         }
-        if (datosRegistroTopicos.respuesta_id()!=null && respuestaRepository.existsById(datosRegistroTopicos.respuesta_id())){
+        if (datosRegistroTopicos.respuesta_id()!=null && !respuestaRepository.existsById(datosRegistroTopicos.respuesta_id())){
             throw new ValidacionIntegridad("Este id para respuesta no fue encontrado.");
         }
 
@@ -43,6 +43,7 @@ public class RegistroTopicoService {
 
         topicosRepository.save(registrar);
 
+       return new DatosRespuestaTopicos(registrar);
     }
 
 

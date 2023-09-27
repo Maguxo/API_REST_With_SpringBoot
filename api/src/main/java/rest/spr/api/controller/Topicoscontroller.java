@@ -7,28 +7,54 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
+import rest.spr.api.domain.autor.Autor;
+import rest.spr.api.domain.autor.AutorRepository;
+import rest.spr.api.domain.autor.DatosListadoAutorEspecifico;
+import rest.spr.api.domain.curso.Curso;
+import rest.spr.api.domain.curso.CursoRepository;
+import rest.spr.api.domain.curso.DatosListadoCursoEspecifico;
+import rest.spr.api.domain.respuesta.DatosListadoRespuestaEspecifico;
+import rest.spr.api.domain.respuesta.Respuesta;
+import rest.spr.api.domain.respuesta.RespuestaRepository;
 import rest.spr.api.domain.topicos.*;
+import rest.spr.api.domain.usuario.DatoslistadoUsuarioEspecifico;
+import rest.spr.api.domain.usuario.Usuario;
+import rest.spr.api.domain.usuario.UsuarioResository;
+import java.net.URI;
 
 @RestController
 @ResponseBody
 @RequestMapping("/topicos")
 public class Topicoscontroller {
 
-    @Autowired
-    private RegistroTopicoService registroTopicoService;
+    /*@Autowired
+   private RegistroTopicoService registroTopicoService;*/
     @Autowired// a nivel de testin no es recomendable
     //Se tendráproblemas al hacer pruebas unitarias
     private TopicosRepository topicosRepository;
-
-    @PostMapping
-    @Transactional
-    public ResponseEntity registroTopico(@RequestBody @Valid DatosRegistroTopicos datosRegistroTopicos){
-
-        registroTopicoService.registro(datosRegistroTopicos);
-        return ResponseEntity.ok(new DatosRespuestaTopicos(null,null,null,
-                null,null,null,null,null));
-    }
+    @Autowired
+    private UsuarioResository usuarioResository;
+    @Autowired
+    private CursoRepository cursoRepository;
+    @Autowired
+    private RespuestaRepository respuestaRepository;
+    @Autowired
+    private AutorRepository autorRepository;
     /*@PostMapping
+    @Transactional
+    public ResponseEntity registroTopico(@RequestBody @Valid DatosRegistroTopicos datosRegistroTopicos)
+    throws ValidacionIntegridad {
+
+       var response= registroTopicoService.registro(datosRegistroTopicos);
+
+
+        return ResponseEntity.ok(response);
+
+       /*return ResponseEntity.ok(new DatosRespuestaTopicos(null,null,null,
+                null,null,null,null,null));
+    }*/
+    @PostMapping
     public ResponseEntity<DatosRespuestaTopicos> insertarTopico(@RequestBody @Valid DatosRegistroTopicos datosRegistroTopicos,
                                                                UriComponentsBuilder uriComponentsBuilder) {
         Topico topico= topicosRepository.save(new Topico(datosRegistroTopicos));
@@ -36,9 +62,9 @@ public class Topicoscontroller {
                 topico.getMensaje(),topico.getFecha(),topico.getStatus(),topico.getId(),topico.getId(),topico.getId());
         URI uri= uriComponentsBuilder.path("/topicos/{id}").buildAndExpand(topico.getId()).toUri();
         return ResponseEntity.created(uri).body(datosRespuestaTopicos);
-    }*/
+    }
     @GetMapping
-    public ResponseEntity<Page<DatosListadoTopico>> listadoTopico(@PageableDefault(size = 4) Pageable paginacion){ //para paginación muestra de datos.
+    public ResponseEntity<Page<DatosListadoTopico>> listadoTopico(@PageableDefault(size = 4) Pageable paginacion, Long id){ //para paginación muestra de datos.
         return ResponseEntity.ok(topicosRepository.findAll(paginacion).map(DatosListadoTopico::new));
     }//@PageableDefault(size = 2) me envia 2 datos solamente
 
@@ -58,11 +84,22 @@ public class Topicoscontroller {
         return ResponseEntity.noContent().build();
     }
     @GetMapping("/{id}")
-    public  ResponseEntity<DatosRespuestaTopicos> retornarDatoTopico(@PathVariable Long id){
+    public  ResponseEntity<DatosListadoGeneral> retornarDatoTopico(@PathVariable Long id){
+
         Topico topico= topicosRepository.getReferenceById(id);
-        var datosTopico= new DatosRespuestaTopicos(topico.getId(),topico.getTitulo(),
-                topico.getMensaje(),topico.getFecha(),topico.getStatus(),topico.getId(),topico.getId(),topico.getId());
-        return ResponseEntity.ok(datosTopico);
+        Usuario usuario= usuarioResository.getReferenceById(id);
+        Curso curso= cursoRepository.getReferenceById(id);
+        Respuesta respuesta= respuestaRepository.getReferenceById(id);
+        Autor autor= autorRepository.getReferenceById(id);
+
+        /*var datosTopico= new DatosRespuestaTopicos(topico.getId(),topico.getTitulo(),
+                topico.getMensaje(),topico.getFecha(),topico.getStatus(),topico.getId(),topico.getId(),topico.getId());*/
+        var general= new DatosListadoGeneral(topico.getTitulo(), topico.getMensaje(),
+                topico.getFecha(), topico.getStatus().toString(), new DatoslistadoUsuarioEspecifico(usuario.getNombre(),usuario.getEmail()),
+                new DatosListadoCursoEspecifico(curso.getNombre().toString(),curso.getCategoria().toString()),
+                new DatosListadoRespuestaEspecifico(respuesta.getMensaje(),respuesta.getFecha(),
+                new DatosListadoAutorEspecifico(autor.getNombre(),autor.getEmail()),respuesta.getSolucion()));
+        return ResponseEntity.ok(general);
     }
 }
 /*@GetMapping

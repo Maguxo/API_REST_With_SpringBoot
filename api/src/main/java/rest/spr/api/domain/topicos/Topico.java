@@ -36,6 +36,7 @@ public class Topico {
     @JoinColumn(name = "respuesta_id")
     private Respuesta respuesta;
     //private List<Respuesta> respuestas = new ArrayList<>();
+
     public Topico(DatosRegistroTopicos datosRegistroTopicos) {
 
       this.titulo= datosRegistroTopicos.titulo();
@@ -44,7 +45,7 @@ public class Topico {
       this.status= datosRegistroTopicos.status();
       this.usuario = new Usuario(datosRegistroTopicos.autor_id());
       this.curso= new Curso(datosRegistroTopicos.curso_id());
-      this.respuesta= new Respuesta(datosRegistroTopicos.autor_id());
+      this.respuesta= new Respuesta(datosRegistroTopicos.respuesta_id());
     }
 
     public Topico(Topico topico) {

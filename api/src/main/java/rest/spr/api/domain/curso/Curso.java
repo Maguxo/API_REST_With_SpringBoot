@@ -19,6 +19,11 @@ public class Curso {
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
     //private Boolean actio;
+
+    public Curso(DatosListadoCursoEspecifico datosListadoCursoEspecifico){ //estamos realizando
+        this.nombre= Nombre.valueOf(datosListadoCursoEspecifico.nombre());
+        this.categoria= Categoria.valueOf(datosListadoCursoEspecifico.categoria());
+    }
     public Curso(DatosRegistroCurso datosRegistroCurso) {
         this.id= datosRegistroCurso.id();
         this.nombre= datosRegistroCurso.nombre();
