@@ -64,9 +64,19 @@
   <p>Teniendo encuneta la solicitud POST para la URL/topicon; los datos, tenidos encuenta para esta tarea son: titulo, mensaje, autor, curso y respuesta. Que se  deben enviarse en el cuerpo de la solicitud, en formato JSON.</p>
   <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/424959aa-5020-4a4d-ad92-63ae441e1382"  width=800 height="350">
 
-   <h1>📜Mostrar topico</h1>
-   <p>Teniendo encuenta la solicitud GET para la URI/topicos se debe mostrar titulo, mensaje, fecha de creación, estatus autor y curso con la respuesta, en formato JSON. </p>
+   <h1>🪪Detallando topico</h1>
+   <p>Teniendo encuenta la solicitud GET para la URI/topicos{id} se debe mostrar titulo, mensaje, fecha de creación, estatus autor y curso con la respuesta, en formato JSON. </p>
     <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/8e750716-fec9-43e3-9b40-aa2b3ea153ef"  width=800 height="350">
+  
+   <h1>📜Mostrando topico</h1>
+   <p>Teniendo encuenta la solicitud GET para la URI/topicos se debe mostrar titulo, mensaje, fecha de creación, estatus autor y respuesta, en formato JSON. </p>
+    <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/755c3bf8-f7cd-44c0-abdd-b3e79a4d4811"  width=800 height="350">
+
+   <h1>🔄️Actualiza Topico</h1>
+   <p>Write what happened..</p>
+    <img src=""  width=800 height="350">
+</div>
+
 </div>
 
 </html>
