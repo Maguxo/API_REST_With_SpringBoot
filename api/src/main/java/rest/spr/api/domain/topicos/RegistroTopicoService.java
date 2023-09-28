@@ -1,16 +1,12 @@
 package rest.spr.api.domain.topicos;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.ParameterResolutionDelegate;
 import org.springframework.stereotype.Service;
-import rest.spr.api.domain.autor.AutorRepository;
 import rest.spr.api.domain.curso.CursoRepository;
-import rest.spr.api.domain.respuesta.Respuesta;
 import rest.spr.api.domain.respuesta.RespuestaRepository;
 import rest.spr.api.domain.usuario.UsuarioResository;
 import rest.spr.api.infra.errores.ValidacionIntegridad;
-
-import java.time.LocalDateTime;
 
 @Service
 public class RegistroTopicoService {

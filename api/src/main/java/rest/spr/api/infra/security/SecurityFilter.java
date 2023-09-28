@@ -1,5 +1,6 @@
 package rest.spr.api.infra.security;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

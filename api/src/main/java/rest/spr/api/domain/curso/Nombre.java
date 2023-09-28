@@ -1,5 +1,6 @@
 package rest.spr.api.domain.curso;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 public enum Nombre {
     ANGULAR,
     JAVASCRIPT_VALIDACION,

@@ -1,5 +1,6 @@
 package rest.spr.api.domain.topicos;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;

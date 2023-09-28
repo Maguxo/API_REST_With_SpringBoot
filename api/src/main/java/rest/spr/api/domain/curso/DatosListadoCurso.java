@@ -1,5 +1,6 @@
 package rest.spr.api.domain.curso;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 public record DatosListadoCurso(Long id,String nombre, String categoria) {
 
     public DatosListadoCurso(Curso curso){ //se crea el constructor para que me mapee lo que solo quiero que me muestre.

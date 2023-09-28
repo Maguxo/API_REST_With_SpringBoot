@@ -1,11 +1,11 @@
 package rest.spr.api.domain.autor;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import java.util.Collection;
 import java.util.List;
 

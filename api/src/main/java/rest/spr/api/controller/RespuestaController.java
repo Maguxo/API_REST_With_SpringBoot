@@ -1,5 +1,6 @@
 package rest.spr.api.controller;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import rest.spr.api.domain.respuesta.*;
-
 import java.net.URI;
 
 @RestController

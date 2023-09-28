@@ -1,5 +1,6 @@
 package rest.spr.api.infra.errores;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ValidationException;
 import org.springframework.http.ResponseEntity;

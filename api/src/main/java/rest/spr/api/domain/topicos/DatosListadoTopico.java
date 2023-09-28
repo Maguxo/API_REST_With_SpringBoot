@@ -1,4 +1,6 @@
 package rest.spr.api.domain.topicos;
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import java.time.LocalDateTime;
 
 public record DatosListadoTopico(Long id,String titulo, String mensaje, LocalDateTime fecha, String status,

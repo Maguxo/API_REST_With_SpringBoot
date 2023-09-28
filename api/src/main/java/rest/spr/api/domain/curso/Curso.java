@@ -1,4 +1,6 @@
 package rest.spr.api.domain.curso;
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import jakarta.persistence.*;
 import lombok.*;
 

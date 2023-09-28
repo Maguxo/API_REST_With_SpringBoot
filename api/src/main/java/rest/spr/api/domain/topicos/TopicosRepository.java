@@ -1,5 +1,6 @@
 package rest.spr.api.domain.topicos;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,5 +1,6 @@
 package rest.spr.api.domain.autor;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 

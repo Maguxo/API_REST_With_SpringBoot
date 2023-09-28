@@ -1,4 +1,6 @@
 package rest.spr.api.domain.topicos;
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import jakarta.persistence.*;
 import lombok.*;
 import rest.spr.api.domain.usuario.Usuario;

@@ -1,10 +1,8 @@
 package rest.spr.api.domain.usuario;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import jakarta.persistence.*;
 import lombok.*;
-import rest.spr.api.domain.usuario.DatosActualizarUsuario;
-import rest.spr.api.domain.usuario.DatosRegistroUsuario;
-
 //@Embeddable
 @Table(name = "usuarios")
 @Entity(name = "Usuario")

@@ -1,10 +1,9 @@
 package rest.spr.api.controller;
-
+/**CREATED BY Edgar M Gómez P
+ * Backend Developer*/
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import org.antlr.v4.runtime.Token;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -16,10 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import rest.spr.api.domain.autor.*;
 import rest.spr.api.infra.security.DatosJWTToken;
 import rest.spr.api.infra.security.TokenService;
-
-import java.net.Authenticator;
-import java.net.URI;
-
 @RestController
 @RequestMapping("/autors")
 public class AutorController {
