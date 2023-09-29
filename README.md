@@ -84,7 +84,7 @@
    <h1>🗑️Eliminación topico</h1>
    <p>La API  tener un endpoint para la eliminación de tópicos y aceptar requisiciones DELETE para el URI /topicos/{id}; esto determina la eliminación del registro directamente de nuestra base de datos MySQL:</p>
     <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/96e66e80-d216-4957-a910-186f76b017ec"  width=800 height="350">
-   <p>Writing wht happend...</p>
+   <p>En la siguiente imagen veremos directamente en la base de datos que cumple con el requerimiento sugerido eliminando el registro << 1 >> como se ve en la imagen anterior: </p>
     <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/617ce076-aa3c-4c3a-931d-7ccd0ea4c805"  width=800 height="350">
 
 </div>
