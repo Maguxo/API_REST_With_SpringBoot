@@ -78,7 +78,7 @@
     <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/755c3bf8-f7cd-44c0-abdd-b3e79a4d4811"  width=800 height="350">
 
    <h1>🔄️Actualiza Topico</h1>
-   <p>Teniendo encueta la solicitud PUT para la URI/topicos{id} se aplica las mismas reglas de negocio para el registro de un tópico deben ser aplicadas en la actualización del mismo.</p>
+   <p>Teniendo encueta la solicitud PUT para la URI/topicos{id} se aplica las mismas reglas de negocio para el registro de un tópico por la cual se deben ser aplicadas la actualización del mismo.</p>
     <img src="https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/fd7f5f18-11dd-4d27-b021-1da93b1a4638"  width=800 height="350">
    
 
