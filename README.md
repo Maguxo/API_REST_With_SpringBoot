@@ -105,7 +105,7 @@
   <a href="https://www.facebook.com/magucho.gomez/videos/1850066102079662">
   <img src="https://img.freepik.com/fotos-premium/logotipo-facebook-neon-espacio-texto-graficos-fondo-azul_494516-176.jpg?w=360" alt="Facebook Badge" width=100/></a>
     
-<p></p>
+<p>Tener presente que al oprimir en algunos de los dos etiquetas(facebook y Linkedin) antes de la fecha programada, los llevará al challenge hotel alura.</p>
   </div>
 </div>
 
