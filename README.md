@@ -57,7 +57,7 @@
 
 ---
 <div align="center">
-<h1>⌛Dessarrollo y Prueba de la API🧩</h1>
+<h1>⌛Contrucción, dessarrollo y prueba challenge API Foro Alura🧩</h1>
 <p>Apoyandonos en Insomnia para la pruebas de la API y que las reglas del negocio salieran a lo sigerido, en los datos requeridos en las solicitudes del POST,GET, PUT Y DELETE; mostrados a continuación: </p>
 
   <h1>🔐Log in</h1>
