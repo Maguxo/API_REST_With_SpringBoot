@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 public record DatosRegistroTopicos(
+        Long id,
         @NotNull
         String titulo,
         @NotNull
