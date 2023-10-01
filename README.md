@@ -93,6 +93,9 @@
 
   [ForoApiRest_2.webm](https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/f3ada76b-116f-4ac3-bc0d-bf4cf2d36b9b)
 
+
+[ForoApiRest_3.webm](https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/d7e40839-f7e7-45be-be58-eb89ca1b95ad)
+
   <p>Muestra resumidamente lo que te logra hacer con Insomnia y la manipulacion de los datos del topico.</p>
 </div>
 
