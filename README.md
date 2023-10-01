@@ -91,8 +91,9 @@
   ---
   <h1>🎬Video</h1>
 
-  [ForoApiRestk.webm](https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/18ba6c76-8400-44a0-b44b-872556b7a0a4)
-  <p>Sale video...</p>
+  [ForoApiRest_2.webm](https://github.com/Magucho/API_REST_With_SpringBoot/assets/98346054/f3ada76b-116f-4ac3-bc0d-bf4cf2d36b9b)
+
+  <p>Muestra resumidamente lo que te logra hacer con Insomnia y la manipulacion de los datos del topico.</p>
 </div>
 
 
