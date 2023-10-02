@@ -33,7 +33,7 @@
   <thead>
     <tr>
       <th>Intellij IDE</th>
-       <th>Mysql Workbench</th>
+       <th>MySQL Workbench</th>
        <th>Spring Boot</th>
        <th>Insomnia</th>
        <th>Spring Security</th>  
